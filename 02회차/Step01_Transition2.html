@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02회차/Step01_Transition2.html</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+            border: 2px solid red;
+        }
+        #one { transition: all 5s linear; }
+        #two { transition: all 5s ease-in; }
+        #three { transition: all 5s ease-out; }
+        #four { transition: all 5s ease-in-out; }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="one">linear</div>
+    <div class="box" id="two">ease-in</div>
+    <div class="box" id="three">ease-out</div>
+    <div class="box" id="four">ease-in-out</div>
+
+    <div class="button">
+        <button id="resetBtn">LEFT</button>
+        <script>
+            document.getElementById("resetBtn").addEventListener("click", ()=> {
+                const boxes = document.getElementsByClassName("box");
+
+                for (let i=0; i<boxes.length; i++) {
+                    boxes[i].style.marginLeft = "0px"
+                }
+            })
+        </script>
+
+        <button id="startBtn">RIGHT</button>
+        <script>
+            document.getElementById("startBtn").addEventListener("click", ()=> {
+                const boxes = document.getElementsByClassName("box");
+
+                for (let i=0; i<boxes.length; i++) {
+                    boxes[i].style.marginLeft = "500px"
+                }
+            })
+        </script>
+    </div>
+
+</body>
+</html>

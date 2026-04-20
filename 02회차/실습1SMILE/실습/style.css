@@ -1,13 +1,4 @@
 /*
-    1. 배경색 #333 으로 만들어주세요.
-
-	2. face-menu 버튼 요소들 정렬해주세요.
-	각 버튼 크기 width,heihgt 100px
-
-	3. 각 버튼 요소를 꾸며주세요.
-
-	4. 각 버튼에 마우스오버 하면
-	배경색 #999 색상이 되고 밑으로 살짝 움직이게 해주세요.
 
 	5. face를 만들어보세요.
 	width/height 256px
@@ -18,3 +9,62 @@
 
 	8. .face.angry 안에 CSS 속성을 작성해주세요.
 */
+
+body {
+	background-color: #333;
+}
+
+.face-menu {
+	text-align: center
+}
+
+.face-menu img {
+	width: 100px;
+	height: 100px;
+	border: black 9px solid;
+	border-radius: 50%;
+	margin: 10px;
+	transition: transform 0.4s ease-out;
+}
+
+.face-menu img:hover {
+	background-color: #999;
+	transform: translateY(10px);
+}
+
+.contents {
+	text-align: center;
+}
+.face {
+	width: 256px;
+	height: 256px;
+
+	background-color: white;
+	border: black 9px solid;
+	border-radius: 50%;
+	margin: 200px;
+
+	transition: all 0.4s ease-out;
+}
+.face.smile {
+	content: url(images/smile.png);
+	background-color: yellow;
+
+	transform: rotate(720deg) translateX(-260px) scale(2) translateY(100px);
+}
+.face.angry {
+	content: url(images/angry.png);
+	background-color: red;
+
+	transform: rotate(180deg) translateX(70px) scale(0.8);
+}
+.face.sun {
+	content: url(images/sun.png);
+	background-color: lightblue;
+
+	transform: rotate(360deg);
+}
+
+.buttom {
+	text-align: center;
+}

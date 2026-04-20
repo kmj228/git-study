@@ -5,3 +5,7 @@ $('.face-menu img').on('click',function(){
 	// .face에 그 클래스명을 더해준다.
 	$('.face').removeClass().addClass('face ' + thisClass);
 });
+
+$('#reset-btn').click(function() {
+    $('.face').removeClass('smile angry sun');
+});

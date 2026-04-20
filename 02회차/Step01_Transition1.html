@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02회차/Step01_Transition1.html</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+        }
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+        }
+        .effect1 {
+            /* transition을 적용할 css 속성 지정 */
+            transition-property: background-color;
+            /* transition 적용 시간 */
+            transition-duration: 1s;
+            /* transition 가속도 */
+            transition-timing-function: linear;
+        }
+        .effect2 {
+            /*  property  duration  transition 순으로 입력 */
+            transition: background-color 1s linear;
+        }
+        .effect3 {
+            transition: width 1s linear;
+        }
+        .effect4 { 
+            transition: width 1s linear, height 1s linear, background-color 2s linear;
+        }
+        .effect5 {
+            /* 전체 적용 */
+            transition: all 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box effect1"></div>
+    <div class="box effect2"></div>
+    <div class="box effect3"></div>
+    <div class="box effect4"></div>
+    <div class="box effect5"></div>
+</body>
+</html>
