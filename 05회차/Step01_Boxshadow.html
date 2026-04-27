@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Boxshadow.html</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /* 
+                [그림자 효과]
+                1. 수평위치
+                2. 수직위치
+                3. 흐릿하게 하는 반경
+                4. 퍼트리는 길이
+                5. 색상
+            */
+            box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 0.85);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+            /* inset 는 안쪽 그림자 */
+            box-shadow: inset 10px 10px 20px 6px rgba(0, 0, 0, 0.85);
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+
+            box-shadow: 10px 10px 20px 6px black;
+            border-radius: 40px;
+        }
+
+        h1 {
+            /* 1.수평위치 2.수직위치 3.흐릿하게하는반경 4.색상 */
+            text-shadow: 2px 2px 4px black;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <br/>
+    <div class="box2"></div>
+    <br/>
+    <div class="box3"></div>
+    <br/>
+    <h1>Hello!</h1>
+</body>
+</html>
