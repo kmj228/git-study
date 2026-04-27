@@ -1,0 +1,46 @@
+body,
+h1,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #000;
+  color: #666;
+  font-family: arial;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+/*
+	1. 전체 div 레이아웃을 잡고 중앙정렬 해보세요.
+	width 960px
+
+	2. Header 영역을 만들어보세요.
+
+	3. 컨텐츠 영역의 레이아웃을 3분의1로 분할하여 만들어보세요.
+	Height 500px
+
+	4. 각 영역 안을 꾸며주세요.
+	단, p는 400px
+	food-wrap에 width값을 따로 주지 마세요.
+
+	5. 마우스오버시에 width가 커지게 해주세요.
+
+	6. about-section 레이아웃을 만들어주세요.
+	heihgt:500px;
+
+	7. about-section안의 레이아웃을 꾸며주세요.
+
+	8. 클릭하면 나오게 해주세요.
+*/
