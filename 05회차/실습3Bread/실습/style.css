@@ -12,35 +12,97 @@ li {
 }
 
 body {
-  background-color: #000;
-  color: #666;
+  background-color: black;
+  color: gray;
   font-family: arial;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: gray;
 }
 
-/*
-	1. 전체 div 레이아웃을 잡고 중앙정렬 해보세요.
-	width 960px
 
-	2. Header 영역을 만들어보세요.
+#section {
+	width: 960px;
+	margin: 0 auto;
+}
 
-	3. 컨텐츠 영역의 레이아웃을 3분의1로 분할하여 만들어보세요.
-	Height 500px
 
-	4. 각 영역 안을 꾸며주세요.
-	단, p는 400px
-	food-wrap에 width값을 따로 주지 마세요.
+.header .logo {
+	display: inline-block;
+	font-size: 60px;
+	font-weight: 700;
+	border-bottom: 5px solid gray;
+	margin: 20px 0;
+}
 
-	5. 마우스오버시에 width가 커지게 해주세요.
+.wrapper {
 
-	6. about-section 레이아웃을 만들어주세요.
-	heihgt:500px;
+}
 
-	7. about-section안의 레이아웃을 꾸며주세요.
+.wrapper .food_wrapper {
+	display: flex;
+}
 
-	8. 클릭하면 나오게 해주세요.
-*/
+.wrapper .food_wrapper li {
+	position: relative;
+	width: 33.3334%;
+	height: 500px;
+	opacity: 0.5;
+	/* display: flex;
+	align-items: flex-end; */
+	background-position: center;
+	transition: all 1s;
+}
+
+.wrapper .food_wrapper li.cookie {
+	background-image: url(images/bg-cookie.png);
+} 
+
+.wrapper .food_wrapper li.cake {
+	background-image: url(images/bg-cake.png);
+} 
+
+.wrapper .food_wrapper li.crepe {
+	background-image: url(images/bg-crepe.png);
+} 
+
+.wrapper .food_wrapper li .food_wrap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: black;
+	opacity: 0.8;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.wrapper .food_wrapper li .food_wrap h3 {
+	margin-bottom: 15px;
+}
+
+.wrapper .food_wrapper li .food_wrap p {
+	width: 400px;
+}
+
+.wrapper .food_wrapper:hover li {
+	width: 25%;
+}
+
+.wrapper .food_wrapper li:hover {
+	width: 50%;
+	opacity: 1;
+}
+
+.wrapper .food_wrapper li:hover .food_wrap {
+	color: white;
+}
+
+.wrapper .food_wrapper li:hover .food_wrap h3 {
+	color: orange;
+}
