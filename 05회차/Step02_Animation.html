@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Animation.html</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            border: 4px solid black;
+        }
+
+
+        /* 
+            애니메이션 keyframes 정의 
+
+            @keyframes 함수명 {
+                진행률 {
+                    css
+                }
+                진행률 {
+                    css        
+                }
+            }
+        */
+        @keyframes test-keyframes {
+                0% {
+                    background-color: red;
+                    transform: rotate(0deg) scale(1.0);
+                }
+                50% {
+                    background-color: green;
+                    transform: rotate(-180deg) scale(3.0);
+                }
+                100% {
+                    background-color: blue;
+                    transform: rotate(360deg) scale(0.5);
+                }
+        }
+
+        .box:hover {
+            /* 적용할 keyframes 이름 */
+            animation-name: test-keyframes; 
+            /* 애니메이션 적용 시간 */
+            animation-duration: 1s;
+            /* 애니메이션 가속도 */
+            animation-timing-function: ease-in-out;
+            /* 애니메이션 반복 횟수 */
+            animation-iteration-count: infinite;
+            /* 애니메이션 진행 방향 normal | reverse | alternate(왔다갔다함) */
+            animation-direction: alternate;
+        }
+
+        @keyframes test-keyframes2 {
+            0% {
+                background-color: red;
+                transform: rotate(0deg);
+            }
+            50% {
+                background-color: green;
+                transform: rotate(720deg);
+            }
+            100% {
+                background-color: blue;
+                transform: rotate(-720deg);
+            }
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            border: 4px solid black;
+
+            /* 애니메이션 속성 1줄 나열도 가능 */
+            animation: test-keyframes2 1s ease-in-out infinite alternate
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <br/>
+    <div class="box2"></div>
+</body>
+</html>
