@@ -1,21 +1,190 @@
-/*
-	** 본인이 그리고 싶은 것을 자유롭게 그려주시면 됩니다.
-	애니메이션은 5가지 이상 만들어서 적용해주세요.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-	1. background색을 원하는 색으로 넣어주세요.
+body {
+    background: #f0e6d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-	2. 새의 몸통을 원하는대로 꾸며주세요.
-	- 센터정렬하면서 중앙보다 살짝 더 아래 위치하게 해주세요.
+.scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-	3. 새의 눈을 꾸며주세요.
-	- 가상클래스를 이용하여 눈물 혹은 선글라스 등의 장식도 만들어주세요.
+.cat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-	4. 입을 만들어주세요.
+/* 머리 */
+.head {
+    position: relative;
+    width: 150px;
+    height: 130px;
+    z-index: 2;
+}
 
-	5. 날개를 만들어주세요.
+/* 귀 */
+.ear {
+    position: absolute;
+    top: -28px;
+    border-left: 46px solid transparent;
+    border-right: 46px solid transparent;
+    border-bottom: 62px solid #2c2c2c;
+    z-index: 1;
+}
+.ear.left  { 
+    left: -12px;  
+    transform: rotate(-28deg); 
+}
+.ear.left.inner { 
+    left: 9px;
+    top: -18px;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 32px solid #e0728a; 
+}
 
-	6. 가상클래스를 이용하여 꼬리를 만들어주세요.
+.ear.right { 
+    right: -12px; 
+    transform: rotate(28deg);
+ }
+.ear.right.inner { 
+    right: 9px;
+    top: -18px;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 32px solid #e0728a;
+ }
 
-	7. 애니메이션을 마음껏 걸어주세요.
+/* 얼굴 */
+.face {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 130px;
+    background: #2c2c2c;
+    border-radius: 50%;
+}
 
-*/
+/* 눈 */
+.eye {
+    position: absolute;
+    top: 38px;
+    width: 34px;
+    height: 34px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eye.left  { left: 26px; }
+.eye.right { right: 26px; }
+
+.pupil {
+    width: 18px;
+    height: 18px;
+    background: #2060b0;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* 코 */
+.nose {
+    position: absolute;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 10px;
+    background: #e0728a;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+/* 수염 */
+.whisker-group {
+    position: absolute;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    rotate: 180deg;
+}
+.whisker-group.left  { right: 50%; }
+.whisker-group.right { left: 50%; }
+
+.whisker {
+    width: 55px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 1px;
+}
+.whisker-group.left  .whisker:nth-child(1) { transform-origin: right center; transform: rotate(-10deg); }
+.whisker-group.left  .whisker:nth-child(2) { transform-origin: right center; transform: rotate(0deg); }
+.whisker-group.left  .whisker:nth-child(3) { transform-origin: right center; transform: rotate(10deg); }
+
+.whisker-group.right .whisker:nth-child(1) { transform-origin: left center;  transform: rotate(10deg); }
+.whisker-group.right .whisker:nth-child(2) { transform-origin: left center;  transform: rotate(0deg); }
+.whisker-group.right .whisker:nth-child(3) { transform-origin: left center;  transform: rotate(-10deg); }
+
+/* 몸통 */
+.body {
+    position: relative;
+    width: 130px;
+    height: 110px;
+    background: #2c2c2c;
+    border-radius: 50% 50% 46% 46%;
+    margin-top: -18px;
+    z-index: 1;
+}
+
+/* 손 */
+.hand {
+    position: absolute;
+    bottom: 70px;
+    width: 36px;
+    height: 22px;
+    background: #2c2c2c;
+    border-radius: 50%;
+}
+.hand.left  { left: -16px; }
+.hand.right { right: -16px; }
+
+/* 발 */
+.foot {
+    position: absolute;
+    bottom: -10px;
+    width: 36px;
+    height: 22px;
+    background: #2c2c2c;
+    border-radius: 50%;
+}
+.foot.left  { left: 16px; }
+.foot.right { right: 16px; }
+
+/* 배꼽 */
+.navel {
+    position: absolute;
+    left: 60px;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 그림자 */
+.shadow {
+    width: 130px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.13);
+    border-radius: 50%;
+}
