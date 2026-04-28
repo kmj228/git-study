@@ -10,12 +10,15 @@
             <div class="cat">
                 <!-- 머리 -->
                 <div class="head">
-                    <!-- 귀 -->
-                    <div class="ear left"></div>
-                    <div class="ear left inner"></div>
-
-                    <div class="ear right"></div>
-                    <div class="ear right inner"></div>
+                    <!-- 귀 (outer+inner를 한 wrapper로 묶어야 함께 자연스럽게 움직임) -->
+                    <div class="ear-wrap left">
+                        <div class="outer"></div>
+                        <div class="inner"></div>
+                    </div>
+                    <div class="ear-wrap right">
+                        <div class="outer"></div>
+                        <div class="inner"></div>
+                    </div>
                     
                     <!-- 얼굴 -->
                     <div class="face">
@@ -45,12 +48,42 @@
                 </div>
                 <!-- 몸통 -->
                 <div class="body">
+                    <!-- 꼬리 -->
+                    <div class="tail"></div>
                     <!-- 손 -->
-                    <div class="hand left"></div>
-                    <div class="hand right"></div>
+                    <div class="hand left">
+                        <div class="toe-row">
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                        </div>
+                        <div class="pad"></div>
+                    </div>
+                    <div class="hand right">
+                        <div class="toe-row">
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                        </div>
+                        <div class="pad"></div>
+                    </div>
                     <!-- 발 -->
-                    <div class="foot left"></div>
-                    <div class="foot right"></div>
+                    <div class="foot left">
+                        <div class="toe-row">
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                        </div>
+                        <div class="pad"></div>
+                    </div>
+                    <div class="foot right">
+                        <div class="toe-row">
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                            <div class="toe"></div>
+                        </div>
+                        <div class="pad"></div>
+                    </div>
                     <!-- 배꼽 -->
                     <p class="navel"> * </p>
                 </div>
