@@ -1,3 +1,7 @@
+﻿/* ============================
+   기본
+   ============================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +25,177 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+
+/* ============================
+   배경
+   ============================ */
+
+/* 배경 발바닥 */
+.bg-paws {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scene {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-paw {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    bottom: -50px;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.bg-paw .toe-row {
+    gap: 3px;
+    bottom: 15px;
+}
+
+.bg-paw .toe {
+    width: 8px;
+    height: 8px;
+}
+
+.bg-paw .toe-row .toe:nth-child(2) {
+    position: relative;
+    top: -4px;
+}
+
+.bg-paw .pad {
+    width: 18px;
+    height: 13px;
+}
+
+.bg-paw:nth-child(1) {
+    left: 7%;
+    rotate: 8deg;
+    animation-name: float-paw;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.bg-paw:nth-child(2) {
+    left: 15%;
+    rotate: -2deg;
+    animation-name: float-paw;
+    animation-duration: 11.5s;
+    animation-delay: -3s;
+}
+
+.bg-paw:nth-child(3) {
+    left: 28%;
+    rotate: 10deg;
+    animation-name: float-paw;
+    animation-duration: 8.5s;
+    animation-delay: -1.5s;
+}
+
+.bg-paw:nth-child(4) {
+    left: 38%;
+    rotate: -4deg;
+    animation-name: float-paw;
+    animation-duration: 12s;
+    animation-delay: -2s;
+}
+
+.bg-paw:nth-child(5) {
+    left: 52%;
+    rotate: 8deg;
+    animation-name: float-paw;
+    animation-duration: 9.5s;
+    animation-delay: -2.5s;
+}
+
+.bg-paw:nth-child(6) {
+    left: 61%;
+    rotate: -10deg;
+    animation-name: float-paw;
+    animation-duration: 10.5s;
+    animation-delay: -5s;
+}
+
+.bg-paw:nth-child(7) {
+    left: 68%;
+    rotate: 2deg;
+    animation-name: float-paw;
+    animation-duration: 11s;
+    animation-delay: -3s;
+}
+
+.bg-paw:nth-child(8) {
+    left: 76%;
+    rotate: -5deg;
+    animation-name: float-paw;
+    animation-duration: 8s;
+    animation-delay: -5s;
+}
+
+.bg-paw:nth-child(9) {
+    left: 83%;
+    rotate: -8deg;
+    animation-name: float-paw;
+    animation-duration: 10s;
+    animation-delay: -1s;
+}
+
+.bg-paw:nth-child(10) {
+    left: 91%;
+    rotate: -5deg;
+    animation-name: float-paw;
+    animation-duration: 11.5s;
+    animation-delay: -2s;
+}
+
+/* 배경 발바닥 */
+@keyframes float-paw {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    8% {
+        transform: translateY(-10vh);
+        opacity: 0.45;
+    }
+
+    72% {
+        transform: translateY(-72vh);
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* ============================
+   동물 있는 배경
+   ============================ */
 
 .scene {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* ============================
+   고양이
+   ============================ */
 
 .cat {
     position: relative;
@@ -52,12 +220,14 @@ body {
     top: -30px;
     z-index: 1;
 }
+
 .ear-wrap.left {
     left: 3px;
     transform: rotate(-28deg);
     transform-origin: bottom center;
     animation: ear-jump-left 5s ease-in-out infinite;
 }
+
 .ear-wrap.right {
     right: 3px;
     transform: rotate(28deg);
@@ -107,8 +277,14 @@ body {
     overflow: hidden;
     animation: blink 4s ease-in-out infinite;
 }
-.eye.left  { left: 26px; }
-.eye.right { right: 26px; }
+
+.eye.left {
+    left: 26px;
+}
+
+.eye.right {
+    right: 26px;
+}
 
 .pupil {
     width: 18px;
@@ -161,8 +337,18 @@ body {
     width: 0;
     height: 0;
 }
-.whisker-group.left  { right: 50%; transform-origin: 0 0; animation: whisker-left 5s ease-in-out infinite; }
-.whisker-group.right { left: 50%; transform-origin: 0 0; animation: whisker-right 5s ease-in-out infinite; }
+
+.whisker-group.left {
+    right: 50%;
+    transform-origin: 0 0;
+    animation: whisker-left 5s ease-in-out infinite;
+}
+
+.whisker-group.right {
+    left: 50%;
+    transform-origin: 0 0;
+    animation: whisker-right 5s ease-in-out infinite;
+}
 
 .whisker {
     position: absolute;
@@ -174,14 +360,32 @@ body {
 }
 
 /* 왼쪽 수염 */
-.whisker-group.left .whisker { right: 0; transform-origin: right center; }
-.whisker-group.left .whisker:nth-child(1) { transform: rotate(-10deg); }
-.whisker-group.left .whisker:nth-child(3) { transform: rotate(10deg); }
+.whisker-group.left .whisker {
+    right: 0;
+    transform-origin: right center;
+}
+
+.whisker-group.left .whisker:nth-child(1) {
+    transform: rotate(-10deg);
+}
+
+.whisker-group.left .whisker:nth-child(3) {
+    transform: rotate(10deg);
+}
 
 /* 오른쪽 수염 */
-.whisker-group.right .whisker { left: 0; transform-origin: left center; }
-.whisker-group.right .whisker:nth-child(1) { transform: rotate(10deg); }
-.whisker-group.right .whisker:nth-child(3) { transform: rotate(-10deg); }
+.whisker-group.right .whisker {
+    left: 0;
+    transform-origin: left center;
+}
+
+.whisker-group.right .whisker:nth-child(1) {
+    transform: rotate(10deg);
+}
+
+.whisker-group.right .whisker:nth-child(3) {
+    transform: rotate(-10deg);
+}
 
 /* 몸통 */
 .body {
@@ -204,8 +408,14 @@ body {
     border-radius: 50%;
     animation: hand-jump 5s ease-in-out infinite;
 }
-.hand.left  { left: -16px; }
-.hand.right { right: -16px; }
+
+.hand.left {
+    left: -16px;
+}
+
+.hand.right {
+    right: -16px;
+}
 
 /* 발 */
 .foot {
@@ -217,8 +427,14 @@ body {
     border-radius: 50%;
     animation: foot-jump 5s ease-in-out infinite;
 }
-.foot.left  { left: 16px; }
-.foot.right { right: 16px; }
+
+.foot.left {
+    left: 16px;
+}
+
+.foot.right {
+    right: 16px;
+}
 
 /* 배꼽 */
 .navel {
@@ -270,6 +486,7 @@ body {
     bottom: auto;
     transform: translateY(-50%);
 }
+
 .hand.left .pad {
     top: 50%;
     left: 15px;
@@ -288,6 +505,7 @@ body {
     bottom: auto;
     transform: translateY(-50%);
 }
+
 .hand.right .pad {
     top: 50%;
     right: 15px;
@@ -348,218 +566,644 @@ body {
     border-right-color: white;
 }
 
-.bg-heart:nth-child(1) { left: 10%;  rotate:  5deg;  animation-name: float-heart; animation-duration: 10s;   animation-delay: -1s;   }
-.bg-heart:nth-child(2) { left: 22%;  rotate: -8deg;  animation-name: float-heart; animation-duration: 12.5s; animation-delay: -4s;   }
-.bg-heart:nth-child(3) { left: 33%;  rotate: 12deg;  animation-name: float-heart; animation-duration: 9s;    animation-delay: -2.5s; }
-.bg-heart:nth-child(4) { left: 46%;  rotate: -3deg;  animation-name: float-heart; animation-duration: 11s;   animation-delay: -6s;   }
-.bg-heart:nth-child(5) { left: 56%;  rotate:  7deg;  animation-name: float-heart; animation-duration: 8.5s;  animation-delay: -0.5s; }
-.bg-heart:nth-child(6) { left: 65%;  rotate:-12deg;  animation-name: float-heart; animation-duration: 13s;   animation-delay: -3s;   }
-.bg-heart:nth-child(7) { left: 77%;  rotate:  4deg;  animation-name: float-heart; animation-duration: 10.5s; animation-delay: -5s;   }
-.bg-heart:nth-child(8) { left: 89%;  rotate: -6deg;  animation-name: float-heart; animation-duration: 9.5s;  animation-delay: -2s;   }
-
-/* 배경 발바닥 */
-.bg-paws {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.scene {
-    position: relative;
-    z-index: 1;
-}
-
-.bg-paw {
-    position: absolute;
-    width: 30px;
-    height: 28px;
-    bottom: -50px;
-    opacity: 0;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.bg-paw .toe-row {
-    gap: 3px;
-    bottom: 15px;
-}
-
-.bg-paw .toe {
-    width: 8px;
-    height: 8px;
-}
-
-.bg-paw .toe-row .toe:nth-child(2) {
-    position: relative;
-    top: -4px;
-}
-
-.bg-paw .pad {
-    width: 18px;
-    height: 13px;
-}
-
-.bg-paw:nth-child(1)  { left: 7%;  rotate: 8deg;   animation-name: float-paw; animation-duration: 9s;    animation-delay: 0s;    }
-.bg-paw:nth-child(2)  { left: 15%; rotate: -2deg; animation-name: float-paw; animation-duration: 11.5s; animation-delay: -3s;   }
-.bg-paw:nth-child(3)  { left: 28%; rotate: 10deg;  animation-name: float-paw; animation-duration: 8.5s;  animation-delay: -1.5s; }
-.bg-paw:nth-child(4)  { left: 38%; rotate: -4deg;  animation-name: float-paw; animation-duration: 12s;   animation-delay: -2s;   }
-.bg-paw:nth-child(5)  { left: 52%; rotate: 8deg;  animation-name: float-paw; animation-duration: 9.5s;  animation-delay: -2.5s; }
-.bg-paw:nth-child(6)  { left: 61%; rotate: -10deg; animation-name: float-paw; animation-duration: 10.5s; animation-delay: -5s;   }
-.bg-paw:nth-child(7)  { left: 68%; rotate: 2deg;  animation-name: float-paw; animation-duration: 11s;   animation-delay: -3s;   }
-.bg-paw:nth-child(8)  { left: 76%; rotate: -5deg;  animation-name: float-paw; animation-duration: 8s;    animation-delay: -5s;   }
-.bg-paw:nth-child(9)  { left: 83%; rotate: -8deg; animation-name: float-paw; animation-duration: 10s;   animation-delay: -1s;   }
-.bg-paw:nth-child(10) { left: 91%; rotate: -5deg;  animation-name: float-paw; animation-duration: 11.5s; animation-delay: -2s;   }
-
-/* ============================
-   @keyframes 애니메이션 정의
-   ============================ */
-
 /* 눈 깜빡임 */
 @keyframes blink {
-    0%, 88%, 100% { transform: scaleY(1); }
-    92%           { transform: scaleY(0.08); }
+
+    0%,
+    88%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    92% {
+        transform: scaleY(0.08);
+    }
 }
 
 /* 점프 */
 @keyframes jump {
-    0%, 30%   { transform: translateY(0); }
+
+    0%,
+    30% {
+        transform: translateY(0);
+    }
+
     41% {
         transform: translateY(8px) scale(1.15, 0.8);
         animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     58% {
         transform: translateY(-130px) scale(0.85, 1.15);
         animation-timing-function: cubic-bezier(0.5, 0, 0.8, 0.5);
     }
+
     72% {
         transform: translateY(0) scale(1.25, 0.7);
         animation-timing-function: ease-out;
     }
-    82% { transform: translateY(-10px) scale(0.95, 1.05); }
-    92% { transform: translateY(0) scale(1.02, 0.98); }
-    100% { transform: translateY(0) scale(1, 1); }
+
+    82% {
+        transform: translateY(-10px) scale(0.95, 1.05);
+    }
+
+    92% {
+        transform: translateY(0) scale(1.02, 0.98);
+    }
+
+    100% {
+        transform: translateY(0) scale(1, 1);
+    }
 }
 
 /* 꼬리 */
 @keyframes tail-jump {
-    0%, 30% { transform: rotate(-20deg); }
-    41% { transform: rotate(35deg); }
-    52% { transform: rotate(-65deg); }
-    62% { transform: rotate(-60deg); } 
-    72% { transform: rotate(35deg); } 
-    82% { transform: rotate(-25deg); }
-    92% { transform: rotate(-15deg); }
-    100% { transform: rotate(-20deg); }
+
+    0%,
+    30% {
+        transform: rotate(-20deg);
+    }
+
+    41% {
+        transform: rotate(35deg);
+    }
+
+    52% {
+        transform: rotate(-65deg);
+    }
+
+    62% {
+        transform: rotate(-60deg);
+    }
+
+    72% {
+        transform: rotate(35deg);
+    }
+
+    82% {
+        transform: rotate(-25deg);
+    }
+
+    92% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
 }
 
 
 /* 그림자 */
 @keyframes jump-shadow {
-    0%, 30% { transform: scale(1); opacity: 0.75; filter: blur(1px); }
-    41% { transform: scale(1.3); opacity: 0.4; }
-    58% { transform: scale(0.3); opacity: 0.25; filter: blur(4px); }
-    72% { transform: scale(1.3); opacity: 0.4; }
-    82% { transform: scale(0.9); opacity: 0.35; }
-    92% { transform: scale(1.1); opacity: 0.4; }
-    100% { transform: scale(1); opacity: 0.75; filter: blur(1px); }
+
+    0%,
+    30% {
+        transform: scale(1);
+        opacity: 0.75;
+        filter: blur(1px);
+    }
+
+    41% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+
+    58% {
+        transform: scale(0.3);
+        opacity: 0.25;
+        filter: blur(4px);
+    }
+
+    72% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+
+    82% {
+        transform: scale(0.9);
+        opacity: 0.35;
+    }
+
+    92% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.75;
+        filter: blur(1px);
+    }
 }
 
 /* 왼쪽 귀  */
 @keyframes ear-jump-left {
-    0%, 30% { transform: rotate(-28deg) scaleY(1); }
-    41% { transform: rotate(-20deg) scaleY(0.8); } 
-    72% { transform: rotate(-35deg) scaleY(0.7); } 
-    82% { transform: rotate(-28deg) scaleY(1.1); }
-    100% { transform: rotate(-28deg) scaleY(1); }
+
+    0%,
+    30% {
+        transform: rotate(-28deg) scaleY(1);
+    }
+
+    41% {
+        transform: rotate(-20deg) scaleY(0.8);
+    }
+
+    72% {
+        transform: rotate(-35deg) scaleY(0.7);
+    }
+
+    82% {
+        transform: rotate(-28deg) scaleY(1.1);
+    }
+
+    100% {
+        transform: rotate(-28deg) scaleY(1);
+    }
 }
 
 /* 오른쪽 귀 */
 @keyframes ear-jump-right {
-    0%, 30% { transform: rotate(28deg) scaleY(1); }
-    41% { transform: rotate(20deg) scaleY(0.8); }
-    72% { transform: rotate(35deg) scaleY(0.7); }
-    82% { transform: rotate(28deg) scaleY(1.1); }
-    100% { transform: rotate(28deg) scaleY(1); }
+
+    0%,
+    30% {
+        transform: rotate(28deg) scaleY(1);
+    }
+
+    41% {
+        transform: rotate(20deg) scaleY(0.8);
+    }
+
+    72% {
+        transform: rotate(35deg) scaleY(0.7);
+    }
+
+    82% {
+        transform: rotate(28deg) scaleY(1.1);
+    }
+
+    100% {
+        transform: rotate(28deg) scaleY(1);
+    }
 }
 
 /* 손 */
 @keyframes hand-jump {
-    0%, 35% { transform: translateY(0); }
-    41% { transform: translateY(3px); }
-    58% { transform: translateY(-8px) rotate(-6deg); }
-    72% { transform: translateY(5px) scaleX(1.1); }
-    80% { transform: translateY(-3px); }
-    100% { transform: translateY(0); }
+
+    0%,
+    35% {
+        transform: translateY(0);
+    }
+
+    41% {
+        transform: translateY(3px);
+    }
+
+    58% {
+        transform: translateY(-8px) rotate(-6deg);
+    }
+
+    72% {
+        transform: translateY(5px) scaleX(1.1);
+    }
+
+    80% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* 발 */
 @keyframes foot-jump {
-    0%, 41%   { transform: translateY(0)     scaleX(1);    }
-    54%        { transform: translateY(-10px) scaleX(0.85); }
-    63%        { transform: translateY(-10px) scaleX(0.85); }
-    72%        { transform: translateY(4px)   scaleX(1.2);  } 
-    79%        { transform: translateY(-2px)  scaleX(0.97); } 
-    86%        { transform: translateY(1px)   scaleX(1.02); } 
-    92%, 100%  { transform: translateY(0)     scaleX(1);    }
+
+    0%,
+    41% {
+        transform: translateY(0) scaleX(1);
+    }
+
+    54% {
+        transform: translateY(-10px) scaleX(0.85);
+    }
+
+    63% {
+        transform: translateY(-10px) scaleX(0.85);
+    }
+
+    72% {
+        transform: translateY(4px) scaleX(1.2);
+    }
+
+    79% {
+        transform: translateY(-2px) scaleX(0.97);
+    }
+
+    86% {
+        transform: translateY(1px) scaleX(1.02);
+    }
+
+    92%,
+    100% {
+        transform: translateY(0) scaleX(1);
+    }
 }
 
 /* 수염 */
 @keyframes whisker-left {
-    0%, 30%    { rotate: 0deg; animation-timing-function: ease-in; }
-    41%        { rotate: 5deg;  animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
-    58%        { rotate: -6deg; animation-timing-function: ease-in; }
-    72%        { rotate: 7deg;  animation-timing-function: ease-out; }
-    82%        { rotate: -2deg; }
-    92%, 100%  { rotate: 0deg; }
+
+    0%,
+    30% {
+        rotate: 0deg;
+        animation-timing-function: ease-in;
+    }
+
+    41% {
+        rotate: 5deg;
+        animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+    }
+
+    58% {
+        rotate: -6deg;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        rotate: 7deg;
+        animation-timing-function: ease-out;
+    }
+
+    82% {
+        rotate: -2deg;
+    }
+
+    92%,
+    100% {
+        rotate: 0deg;
+    }
 }
+
 @keyframes whisker-right {
-    0%, 30%    { rotate: 0deg;  animation-timing-function: ease-in; }
-    41%        { rotate: -5deg; animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
-    58%        { rotate: 6deg;  animation-timing-function: ease-in; }
-    72%        { rotate: -7deg; animation-timing-function: ease-out; }
-    82%        { rotate: 2deg; }
-    92%, 100%  { rotate: 0deg; }
+
+    0%,
+    30% {
+        rotate: 0deg;
+        animation-timing-function: ease-in;
+    }
+
+    41% {
+        rotate: -5deg;
+        animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+    }
+
+    58% {
+        rotate: 6deg;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        rotate: -7deg;
+        animation-timing-function: ease-out;
+    }
+
+    82% {
+        rotate: 2deg;
+    }
+
+    92%,
+    100% {
+        rotate: 0deg;
+    }
 }
 
 /* 코 */
 @keyframes nose-jump {
-    0%, 30%    { transform: translateY(0); animation-timing-function: ease-in; }
-    41%        { transform: translateY(2px); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
-    58%        { transform: translateY(-3px); animation-timing-function: ease-in; }
-    72%        { transform: translateY(2px); animation-timing-function: ease-out; }
-    82%        { transform: translateY(-1px); }
-    92%, 100%  { transform: translateY(0); }
+
+    0%,
+    30% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+    }
+
+    41% {
+        transform: translateY(2px);
+        animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+    }
+
+    58% {
+        transform: translateY(-3px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(2px);
+        animation-timing-function: ease-out;
+    }
+
+    82% {
+        transform: translateY(-1px);
+    }
+
+    92%,
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* 타이틀 */
 @keyframes title-swing {
-    0%, 45%   { transform: scaleX(1)    scaleY(1);    }
-    52%       { transform: scaleX(1.55) scaleY(0.68); }
-    57%       { transform: scaleX(0.78) scaleY(1.22); }
-    63%       { transform: scaleX(1.18) scaleY(0.90); }
-    69%       { transform: scaleX(0.95) scaleY(1.04); }
-    75%, 100% { transform: scaleX(1)    scaleY(1);    }
+
+    0%,
+    45% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    52% {
+        transform: scaleX(1.55) scaleY(0.68);
+    }
+
+    57% {
+        transform: scaleX(0.78) scaleY(1.22);
+    }
+
+    63% {
+        transform: scaleX(1.18) scaleY(0.90);
+    }
+
+    69% {
+        transform: scaleX(0.95) scaleY(1.04);
+    }
+
+    75%,
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
 }
 
 /* 말풍선 */
 @keyframes meow-bubble {
-    0%, 48%  { opacity: 0; transform: scale(0.5); }
-    54%      { opacity: 1; transform: scale(1.1); }
-    65%      { opacity: 1; transform: scale(1);   }
-    70%      { opacity: 0; transform: scale(0.85); }
-    100%     { opacity: 0; }
+
+    0%,
+    48% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    54% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    65% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-/* 배경 발바닥 */
-@keyframes float-paw {
-    0%   { transform: translateY(0); opacity: 0;    }
-    8%   { transform: translateY(-10vh); opacity: 0.45; }
-    72%  { transform: translateY(-72vh); opacity: 0.45; }
-    100% { transform: translateY(-110vh); opacity: 0;    }
+
+/* ============================
+   강아지
+   ============================ */
+
+.dog-wrap {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    z-index: 2;
+    animation: dog-walk 11s linear infinite;
 }
 
+.dog-body {
+    position: relative;
+    width: 88px;
+    height: 50px;
+    background: #c8845a;
+    border-radius: 45% 35% 40% 45%;
+    margin-left: 16px;
+    animation: dog-bob 0.38s ease-in-out infinite;
+}
+
+.dog-tail {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    width: 10px;
+    height: 36px;
+    background: #c8845a;
+    border-radius: 50% 30% 0 50%;
+    transform-origin: bottom center;
+    animation: dog-tail-wag 0.4s ease-in-out infinite;
+}
+
+.dog-head {
+    position: absolute;
+    right: -20px;
+    bottom: 2px;
+    width: 52px;
+    height: 48px;
+    background: #c8845a;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.dog-ear {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    background: #a06540;
+    border-radius: 40% 40% 60% 60%;
+    top: -10px;
+}
+
+.dog-ear.left {
+    left: 3px;
+    transform: rotate(-12deg);
+}
+
+.dog-ear.right {
+    right: 3px;
+    transform: rotate(12deg);
+}
+
+.dog-eye {
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    width: 9px;
+    height: 9px;
+    background: #2c2c2c;
+    border-radius: 50%;
+}
+
+.dog-eye::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+}
+
+.dog-snout {
+    position: absolute;
+    right: -8px;
+    bottom: 8px;
+    width: 22px;
+    height: 16px;
+    background: #a06540;
+    border-radius: 40% 50% 50% 40%;
+}
+
+.dog-nose {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 10px;
+    height: 7px;
+    background: #2c2c2c;
+    border-radius: 50%;
+}
+
+.dog-leg {
+    position: absolute;
+    bottom: -20px;
+    width: 13px;
+    height: 30px;
+    background: #c8845a;
+    border-radius: 0 0 7px 7px;
+    transform-origin: top center;
+}
+
+.dog-leg.fl {
+    right: 10px;
+    animation: dog-leg-a 0.38s linear infinite;
+}
+
+.dog-leg.fr {
+    right: 24px;
+    animation: dog-leg-b 0.38s linear infinite;
+}
+
+.dog-leg.bl {
+    left: 10px;
+    animation: dog-leg-b 0.38s linear infinite;
+}
+
+.dog-leg.br {
+    left: 24px;
+    animation: dog-leg-a 0.38s linear infinite;
+}
+
+@keyframes dog-walk {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes dog-bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes dog-tail-wag {
+
+    0%,
+    100% {
+        transform: rotate(-52deg);
+    }
+
+    50% {
+        transform: rotate(-12deg);
+    }
+}
+
+@keyframes dog-leg-a {
+
+    0%,
+    100% {
+        transform: rotate(-26deg);
+    }
+
+    50% {
+        transform: rotate(26deg);
+    }
+}
+
+@keyframes dog-leg-b {
+
+    0%,
+    100% {
+        transform: rotate(26deg);
+    }
+
+    50% {
+        transform: rotate(-26deg);
+    }
+}
+
+/* DOG 타이틀 */
+.dog-title {
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c8845a;
+    font-size: 2rem;
+    z-index: 1;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: dog-title-show 22s linear infinite;
+}
+
+@keyframes dog-title-show {
+    0% {
+        opacity: 0;
+    }
+
+    24.8% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    75.2% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
