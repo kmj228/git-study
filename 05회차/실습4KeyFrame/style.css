@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+h1 {
+    position: absolute;
+    top: 90px;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2c2c2c;
+}
+
 body {
     background: #f0e6d3;
     display: flex;
@@ -214,7 +223,7 @@ body {
     position: absolute;
     left: 60px;
     bottom: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 /* 발바닥 젤리 */
@@ -310,6 +319,64 @@ body {
     animation: jump-shadow 5s ease-in-out infinite;
 }
 
+/* 배경 발바닥 */
+.bg-paws {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scene {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-paw {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    bottom: -50px;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.bg-paw .toe-row {
+    gap: 3px;
+    bottom: 15px;
+}
+
+.bg-paw .toe {
+    width: 8px;
+    height: 8px;
+}
+
+.bg-paw .toe-row .toe:nth-child(2) {
+    position: relative;
+    top: -4px;
+}
+
+.bg-paw .pad {
+    width: 18px;
+    height: 13px;
+}
+
+.bg-paw:nth-child(1)  { left: 7%;  rotate: 8deg;   animation-name: float-paw; animation-duration: 9s;    animation-delay: 0s;    }
+.bg-paw:nth-child(2)  { left: 15%; rotate: -2deg; animation-name: float-paw; animation-duration: 11.5s; animation-delay: -3s;   }
+.bg-paw:nth-child(3)  { left: 28%; rotate: 10deg;  animation-name: float-paw; animation-duration: 8.5s;  animation-delay: -1.5s; }
+.bg-paw:nth-child(4)  { left: 38%; rotate: -4deg;  animation-name: float-paw; animation-duration: 12s;   animation-delay: -2s;   }
+.bg-paw:nth-child(5)  { left: 52%; rotate: 8deg;  animation-name: float-paw; animation-duration: 9.5s;  animation-delay: -2.5s; }
+.bg-paw:nth-child(6)  { left: 61%; rotate: -10deg; animation-name: float-paw; animation-duration: 10.5s; animation-delay: -5s;   }
+.bg-paw:nth-child(7)  { left: 68%; rotate: 2deg;  animation-name: float-paw; animation-duration: 11s;   animation-delay: -3s;   }
+.bg-paw:nth-child(8)  { left: 76%; rotate: -5deg;  animation-name: float-paw; animation-duration: 8s;    animation-delay: -5s;   }
+.bg-paw:nth-child(9)  { left: 83%; rotate: -8deg; animation-name: float-paw; animation-duration: 10s;   animation-delay: -1s;   }
+.bg-paw:nth-child(10) { left: 91%; rotate: -5deg;  animation-name: float-paw; animation-duration: 11.5s; animation-delay: -2s;   }
+
 /* ============================
    @keyframes 애니메이션 정의
    ============================ */
@@ -335,7 +402,7 @@ body {
         transform: translateY(0) scale(1.25, 0.7);
         animation-timing-function: ease-out;
     }
-    82% { transform: translateY(-10px) scale(0.95, 1.05); } /* 반동 */
+    82% { transform: translateY(-10px) scale(0.95, 1.05); }
     92% { transform: translateY(0) scale(1.02, 0.98); }
     100% { transform: translateY(0) scale(1, 1); }
 }
@@ -343,22 +410,25 @@ body {
 /* 꼬리 */
 @keyframes tail-jump {
     0%, 30% { transform: rotate(-20deg); }
-    40% { transform: rotate(35deg); }
-    52% { transform: rotate(-75deg); }
-    62% { transform: rotate(-70deg); } 
-    72% { transform: rotate(45deg); } 
+    41% { transform: rotate(35deg); }
+    52% { transform: rotate(-65deg); }
+    62% { transform: rotate(-60deg); } 
+    72% { transform: rotate(35deg); } 
     82% { transform: rotate(-25deg); }
+    92% { transform: rotate(-15deg); }
     100% { transform: rotate(-20deg); }
 }
 
 
 /* 그림자 */
 @keyframes jump-shadow {
-    0%, 30% { transform: scale(1); opacity: 0.13; }
-    41% { transform: scale(1.3); opacity: 0.2; }
-    58% { transform: scale(0.3); opacity: 0.03; filter: blur(4px); }
-    72% { transform: scale(1.5); opacity: 0.25; }
-    100% { transform: scale(1); opacity: 0.13; }
+    0%, 30% { transform: scale(1); opacity: 0.75; filter: blur(1px); }
+    41% { transform: scale(1.3); opacity: 0.4; }
+    58% { transform: scale(0.3); opacity: 0.25; filter: blur(4px); }
+    72% { transform: scale(1.3); opacity: 0.4; }
+    82% { transform: scale(0.9); opacity: 0.35; }
+    92% { transform: scale(1.1); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 0.75; filter: blur(1px); }
 }
 
 /* 왼쪽 귀  */
@@ -426,5 +496,13 @@ body {
     72%        { transform: translateY(2px); animation-timing-function: ease-out; }
     82%        { transform: translateY(-1px); }
     92%, 100%  { transform: translateY(0); }
+}
+
+/* 배경 발바닥 */
+@keyframes float-paw {
+    0%   { transform: translateY(0); opacity: 0;    }
+    8%   { transform: translateY(-10vh); opacity: 0.45; }
+    72%  { transform: translateY(-72vh); opacity: 0.45; }
+    100% { transform: translateY(-110vh); opacity: 0;    }
 }
 

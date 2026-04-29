@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>animation</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="scene">
-            <div class="cat">
-                <!-- 머리 -->
-                <div class="head">
-                    <!-- 귀 (outer+inner를 한 wrapper로 묶어야 함께 자연스럽게 움직임) -->
-                    <div class="ear-wrap left">
-                        <div class="outer"></div>
-                        <div class="inner"></div>
-                    </div>
-                    <div class="ear-wrap right">
-                        <div class="outer"></div>
-                        <div class="inner"></div>
-                    </div>
-                    
-                    <!-- 얼굴 -->
-                    <div class="face">
-                        <!-- 눈 왼쪽 -->
-                        <div class="eye left">
-                            <div class="pupil"></div>
-                        </div>
-                        <!-- 눈 오른쪽 -->
-                        <div class="eye right">
-                            <div class="pupil"></div>
-                        </div>
-                        <!-- 코 + 수염 (함께 움직임) -->
-                        <div class="nose-area">
-                            <div class="nose"></div>
-                            <!-- 수염 왼쪽 -->
-                            <div class="whisker-group left">
-                                <div class="whisker"></div>
-                                <div class="whisker"></div>
-                                <div class="whisker"></div>
-                            </div>
-                            <!-- 수염 오른쪽 -->
-                            <div class="whisker-group right">
-                                <div class="whisker"></div>
-                                <div class="whisker"></div>
-                                <div class="whisker"></div>
-                            </div>
-                        </div>
-                    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- 배경 발바닥 -->
+    <div class="bg-paws">
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+        <div class="bg-paw"><div class="toe-row"><div class="toe"></div><div class="toe"></div><div class="toe"></div></div><div class="pad"></div></div>
+    </div>
+    <div class="scene">
+        <h1>CAT</h1>
+        <div class="cat">
+            <!-- 머리 -->
+            <div class="head">
+                <!-- 귀  -->
+                <div class="ear-wrap left">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
                 </div>
-                <!-- 몸통 -->
-                <div class="body">
-                    <!-- 꼬리 -->
-                    <div class="tail"></div>
-                    <!-- 손 -->
-                    <div class="hand left">
-                        <div class="toe-row">
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                        </div>
-                        <div class="pad"></div>
+                <div class="ear-wrap right">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+
+                <!-- 얼굴 -->
+                <div class="face">
+                    <!-- 눈 왼쪽 -->
+                    <div class="eye left">
+                        <div class="pupil"></div>
                     </div>
-                    <div class="hand right">
-                        <div class="toe-row">
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                        </div>
-                        <div class="pad"></div>
+                    <!-- 눈 오른쪽 -->
+                    <div class="eye right">
+                        <div class="pupil"></div>
                     </div>
-                    <!-- 발 -->
-                    <div class="foot left">
-                        <div class="toe-row">
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                            <div class="toe"></div>
+                    <!-- 코 + 수염 -->
+                    <div class="nose-area">
+                        <div class="nose"></div>
+                        <!-- 수염 왼쪽 -->
+                        <div class="whisker-group left">
+                            <div class="whisker"></div>
+                            <div class="whisker"></div>
+                            <div class="whisker"></div>
                         </div>
-                        <div class="pad"></div>
-                    </div>
-                    <div class="foot right">
-                        <div class="toe-row">
-                            <div class="toe"></div>
-                            <div class="toe"></div>
-                            <div class="toe"></div>
+                        <!-- 수염 오른쪽 -->
+                        <div class="whisker-group right">
+                            <div class="whisker"></div>
+                            <div class="whisker"></div>
+                            <div class="whisker"></div>
                         </div>
-                        <div class="pad"></div>
                     </div>
-                    <!-- 배꼽 -->
-                    <p class="navel"> * </p>
                 </div>
             </div>
-            <!-- 그림자 -->
-            <div class="shadow"></div>
+            <!-- 몸통 -->
+            <div class="body">
+                <!-- 꼬리 -->
+                <div class="tail"></div>
+                <!-- 손 -->
+                <div class="hand left">
+                    <div class="toe-row">
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                    </div>
+                    <div class="pad"></div>
+                </div>
+                <div class="hand right">
+                    <div class="toe-row">
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                    </div>
+                    <div class="pad"></div>
+                </div>
+                <!-- 발 -->
+                <div class="foot left">
+                    <div class="toe-row">
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                    </div>
+                    <div class="pad"></div>
+                </div>
+                <div class="foot right">
+                    <div class="toe-row">
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                        <div class="toe"></div>
+                    </div>
+                    <div class="pad"></div>
+                </div>
+                <!-- 배꼽 -->
+                <p class="navel"> * </p>
+            </div>
         </div>
-    </body>
+        <!-- 그림자 -->
+        <div class="shadow"></div>
+    </div>
+
+</body>
+
 </html>
