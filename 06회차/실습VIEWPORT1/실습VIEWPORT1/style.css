@@ -1,0 +1,38 @@
+body,
+ul,
+li,
+h3,
+p {
+  margin: 0px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/*
+	1. 배경색 f4f4f4를 설정하고
+	큰 향수 이미지를 배경 이미지로 붙여주세요.
+
+    2. Sidebar를 만들어주세요.
+	너비값 300px
+
+	3. 메뉴에 hover하면 배경색을 검정색으로 바꿔주세요. 
+
+	4. 콘텐츠 영역을 만들어주세요.
+	너비값은 1000px
+
+	6. 태블릿 1024px 이하일때 반응형으로 바꿔주세요
+
+	7. 모바일 786px 이하일때 반응형으로 바꿔주세요
+*/
