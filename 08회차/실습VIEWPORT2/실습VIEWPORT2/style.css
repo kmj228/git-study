@@ -5,51 +5,187 @@ ul,
 h1,
 h3,
 p {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 li {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 a {
-  text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 img {
-  vertical-align: bottom;
+	vertical-align: bottom;
 }
 
 body {
-  background-color: #64727f;
+	background-color: #64727f;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-/*
-	1. header 로고영역을 만들어주세요.
-	- 배경색 c9e5ff
-	- 로고 너비값 280px / 높이값 50px
+.wrapper {
+	padding: 0 30px;
+	margin: 0 auto;
+	position: relative;
+	max-width: 1220px;
+}
 
+/* header */
 
-	2. gnb 영역을 만들어주세요.
-	- 배경색 505c66
+.header {
+	background-color: #c9e5ff;
+}
 
-	3. a태그에 마우스오버 기능을 넣고 풍선이미지를 배치해주세요.
+.header .wrapper .logo {
+	display: inline-block;
+	background-image: url(images/logo.png);
+	width: 280px;
+	height: 50px;
+	text-indent: -9999px;
+	margin: 20px 0;
+}
 
-	4. 컨텐츠 영역의 만들어주세요.
-	- 배경색 282e33
-	- h3 색상 77aaff
+.header .wrapper .gnb {
+	background-color: #505c66;
+	overflow: hidden;
+}
 
-	5. 아이콘 영역 가상상클래스에 background-image로 넣어주세요.
+.header .wrapper .gnb li {
+	float: left;
+}
 
-	6. FOOTER영역을 만들어주세요.
-	배경색 282e33
+.header .wrapper .gnb li a {
+	padding: 0 20px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+}
 
-	7. 와이드 스크린에서 width 값이 1200을 넘지않게 해주세요.
+.header .wrapper .gnb li a:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
 
-	8. 태블릿(1024px)에서 컨텐츠가 3개씩 나오게 해주세요.
+.header .wrapper .up {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 50;
+}
 
-	9. 모바일(768px)에서 컨텐츠는 2개씩 로고와 gnb수정해주세요.
+/* contents */
 
-	10. 500px보다 작아지면 컨텐츠 1개씩 나오게 해주세요.
-*/
+.contents {
+	background-color: #282e33;
+	margin-bottom: 50px;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contents li {
+	width: 20%;
+	display: flex;
+}
+
+.contents li .inner {
+	text-align: center;
+	margin: 10px;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.contents li img {
+	width: 100%;
+}
+
+.contents li .inner h3 {
+	color: #77aaff;
+	font-size: 20px;
+	padding: 15px 10px 0 10px;
+}
+
+.contents li .inner p {
+	color: #999;
+	padding: 20px;
+	font-size: 12px;
+}
+
+.contents li .inner p:after {
+	content: "";
+	display: block;
+	height: 50px;
+	background-image: url(images/sprite-btn.png);
+	width: 152px;
+	margin: 10px auto 0;
+}
+
+/* footer */
+
+.footer {
+	background-color: #282e33;
+	padding: 40px 0;
+	color: #999;
+	border-top: 1px solid white;
+	font-size: 14px;
+	margin-top: auto;
+}
+
+/* 반응형 태블릿 */
+
+@media (max-width:1024px) {
+	.contents li {
+		width: 33.3334%;
+	}
+}
+
+/* 반응형 모바일 */
+
+@media (max-width:768px) {
+	.header {
+		text-align: center;
+	}
+
+	.header .wrapper .gnb li {
+		width: 20%;
+	}
+
+	.header .wrapper .up {
+		display: none;
+	}
+
+	.contents li {
+		width: 50%;
+	}
+
+	.footer {
+		text-align: center;
+	}
+}
+
+/* 반응형 모바일? */
+
+@media (max-width:500px) {
+	.wrapper {
+		padding: 0;
+	}
+
+	.contents {
+		padding: 0;
+	}
+
+	.contents li {
+		width: 100%;
+	}
+
+	.contents li .inner {
+		margin: 0;
+	}
+}
