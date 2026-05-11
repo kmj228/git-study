@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_SVG1.html</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+            padding: 0;
+        }
+        svg {
+            position: fixed;
+            background-color: lightgray;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 10px;
+            stroke-dasharray: 1000;
+            /* stroke-dashoffset: 1000; */
+            animation: lineAni 2s infinite
+        }
+        line {
+            stroke: black;
+            stroke-width: 10;
+        }
+
+        @keyframes lineAni {
+            0% {
+                stroke-dashoffset: 1000;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <line x1="0" y1="5" x2="1000" y2="5"></line>
+
+    </svg>
+
+    <script>
+        // line의 전체 길이를 구해주는 코드
+        console.log(document.querySelector('line').getTotalLength());
+    </script>
+</body>
+</html>

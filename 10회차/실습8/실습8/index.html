@@ -1,43 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marvel</title>
-    <!-- RESET -->
-    <link rel="stylesheet" href="css/reset.css" />
 
-    <!-- 
-    FONT(프리텐다드나 noto sans 가져오세요)와 fontawesome을 CDN방식으로 링크하세요.
-    -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvel</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  <body>
-    <!-- 
-      포토샵 파일을 CROP하여 완성하세요.
-      https://seik1224.github.io/web2/08/
-    -->
-    <!--
-      1. 구글에 [responsive navbar dropdown]을 검색하여 코드를 가져오고 완성본에 맞게 커스터마이징 해보세요.
-      https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp
-    -->
+<body>
 
-    <!--
-      2. VIDEO 영역을 만들어보세요.
-    -->
+  <!-- header -->
+  <header class="hero">
+    <div class="topnav">
+      <a href="#logo"> <img class="active" src="img/logo.png" /> </a>
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
 
-    <!--
-      3. TEXT 영역을 만들어보세요.
-    -->
+    <!-- video -->
+    <video src="img/video.mp4" autoplay loop muted></video>
+  </header>
 
-    <!--
-      4. 인물 이미지 영역을 만들어보세요.
-    -->
+  <contents>
+    <!-- box1 -->
+    <div class="box1">
+      <h1>Lorem ipsum dolor</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+        eligendi soluta esse ipsam exercitationem quod deserunt. <br />
+        Delectus iusto quisquam nobis dolores dignissimos alias, magni debitis.</p>
+      <button>CLICK ></button>
+    </div>
 
-    <!--
-      5. 아이콘 영역을 만들어보세요.
-    -->
-  </body>
-  <script></script>
+    <!-- box2 -->
+    <div class="box2">
+      <div class="movie">
+        <img src="img/movie1.png">
+        <h2>IRONMAN</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. facere officia perferendis aliquam exercitationem</p>
+      </div>
+
+      <div class="movie">
+        <img src="img/movie2.png">
+        <h2>IRONMAN</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. facere officia perferendis aliquam exercitationem</p>
+      </div>
+
+      <div class="movie">
+        <img src="img/movie3.png">
+        <h2>IRONMAN</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. facere officia perferendis aliquam exercitationem</p>
+      </div>
+    </div>
+
+    <!-- box3 -->
+    <div class="box3">
+      <img class="box3-bg" src="img/bottom.png" />
+      <div class="box3-logos">
+        <img src="img/logo1.png" />
+        <img src="img/logo2.png" />
+        <img src="img/logo3.png" />
+        <img src="img/logo4.png" />
+        <img src="img/logo4.png" />
+        <img src="img/logo3.png" />
+        <img src="img/logo2.png" />
+        <img src="img/logo1.png" />
+      </div>
+    </div>
+  </contents>
+
+  <!-- footer -->
+
+  <footer>
+    <p>© 2026 Kim Minjae. With SBS Academy, Seik Park.</p>
+  </footer>
+
+
+</body>
+<script></script>
+
 </html>

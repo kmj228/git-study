@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_SVG2.html</title>
+</head>
+<style>
+    .typography {
+        fill: none;
+        stroke: lightgreen;
+        stroke-width: 15;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+    }
+
+    .title {
+        fill: lightgreen;
+    }
+
+    .mask {
+        fill: none;
+        stroke: white;
+        stroke-width: 36;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 2142;
+        animation: myLine 5s infinite
+    }
+
+    @keyframes myLine {
+        0% {
+            stroke-dashoffset: 2142;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+
+        <defs>
+            <mask id="mask">
+                <path class="mask"
+                    d="M103.51,107.36l-58.17,0.55l1.38,114.69L4.66,197.65l9-46.3l73.46,1.12c0,0,8.96-58.18,21.71-88.84
+	            s61.39-7.15,49.1,18.53s-51.87,84.12-49.1,107.64s128.17-8.35,143.53-18.79s-65.2-9.01-45.95-48.93s68.68-75.56,61.78-47.05
+	            s-16.73,66.28,0,74.93s86.61-10.73,94.39-37.84s-41.51-17.79-76.03,29.95s4,68.86,29.62,55.34c25.62-13.52,62.04-64.46,27.11-44.94
+	            s-25.66,70.31,6.42,50.97s31.94-61.4,31.94-61.4l-5.8-87.68l21.38,44.52l53.66,104.16L477.3,87.16l-23.52,11.73L374.64,233.3" />
+            </mask>
+        </defs>
+
+        <g mask="url(#mask)">
+            <polygon class="title"
+                points="32.46,203.45 60,203.45 60,164.79 93.07,164.79 93.07,141.31 59.68,141.31 59.68,120.04 99.25,120.04 99.25,96.49 32.46,96.49" />
+            <path class="typography"
+                d="M150.5,101.43c0,0-69.02,87.24-29.42,100.03c39.16,12.65,147.11-37.37,147.11-37.37" />
+            <path class="typography"
+                d="M266.98,109.33c-18.49,21.99-7.67,49.62,17.94,49.28c33.07-0.43,89.38-40.31,76.73-56.41c-12.75-16.24-90.73,30.05-88.62,77.81c1.3,29.4,49.95,24.47,74.57-1.51c15.56-16.43,12.17-29.24,1.08-26.15c-13.18,3.67-42.34,30.8-19.24,45.17c21.18,13.18,45.17-13.62,45.17-29.83" />
+            <polygon class="title" points="426.27,135.75 411.17,96.49 381.63,96.49 409.43,161.34 438.9,161.34" />
+            <polygon class="title" points="422.9,135.75 438,96.49 467.54,96.49 439.75,161.34 410.27,161.34" />
+            <polygon class="title" points="426.27,164.18 411.17,203.45 381.63,203.45 409.43,138.6 438.9,138.6" />
+            <polygon class="title" points="422.9,164.18 438.47,203.45 467.54,203.45 439.75,138.6 410.27,138.6" />
+        </g>
+
+    </svg>
+
+    <script>
+        // class=mask 의 전체 길이를 구해주는 코드
+        console.log(document.querySelector('.mask').getTotalLength());
+    </script>
+
+
+</body>
+
+</html>
