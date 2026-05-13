@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    h1 {
+        font-size: 100px;
+    }
+</style>
 
 <body>
     <p>
         1씩
         <button id="btn_plus_1">1</button>
         <button id="btn_minus_1">-1</button>
+        <p></p>
     </p>
     <p>
         2씩
@@ -23,30 +29,43 @@
         <button id="btn_plus_3">3</button>
         <button id="btn_minus_3">-3</button>
     </p>
+
+    <h1>0</h1>
+    
 </body>
 <script>
 
-    
-    /*
-        btn_plus_1을 클릭하였을 때 btn_plus_1 안의 숫자가 1씩 증가하는 함수를 만들어보세요.
-    
-        1. btn_plus_1 변수를 생성하고 변수에 btn_plus_1를 아이디로 가진 button 요소를 담아보세요. 
-    
-        2. num_plus_1 변수를 생성하고 btn_plus_1을 숫자로 바꿔주는 함수를 넣어보세요.
-        - btn_plus_1을 숫자로 바꿔주는 함수
-        parseInt(괄호 안에 숫자로 바꿔줄 대상을 대입하세요.)
+    var number = 0;
 
-        3. btn_plus_1가 1씩 증가 하도록 만들어보세요.
+    function numInsDes(temp) {
+        number += temp;
+        document.querySelector("h1").innerHTML = number;
+    }
 
-        4. += 사용
-    */
 
     btn_plus_1.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_plus_1").innerHTML));
     })
 
+    btn_minus_1.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_minus_1").innerHTML));
+    })
 
+    btn_plus_2.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_plus_2").innerHTML));
+    })
 
+    btn_minus_2.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_minus_2").innerHTML));
+    })
 
+    btn_plus_3.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_plus_3").innerHTML));
+    })
+
+    btn_minus_3.addEventListener('click', function(){
+        numInsDes(parseInt(document.querySelector("#btn_minus_3").innerHTML));
+    })
 
 
 </script>

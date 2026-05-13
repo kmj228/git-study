@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_JSstart2.html</title>
+    <style>
+        h1 {color: blue;}
+        h2 {color: red;}
+        h3 {color: green;}
+    </style>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2 class="h2Class">h2</h2>
+    <h3 id="h3Id">h3</h3>
+
+    <script>
+
+        // Log
+        console.log(document.querySelector('h1'));
+
+
+        // Variable
+        var h1 = document.querySelector('h1');
+        h1.style.marginLeft = "50px";
+
+        // Selector
+        document.querySelector('h1').style.color = "#000";
+        document.querySelector('#h3Id').style.backgroundColor = "#444";
+
+        // Listener
+        document.querySelector('h2').addEventListener('click', function() {
+            console.log('h2 Click!')
+            document.querySelector('h2').style.color = "#fff";
+            document.querySelector('h2').style.backgroundColor = "#000";
+        });
+
+        hello();  // 함수 선언보다 위에 있어도 잘 작동
+
+        // Function
+        function hello() {
+            console.log("hello");
+        }
+
+        hello();
+
+    </script>
+</body>
+</html>
