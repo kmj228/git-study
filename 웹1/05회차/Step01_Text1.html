@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Text1</title>
+    <style>
+        /* 
+            [글자 스타일] 
+            normal | italic
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            [글꼴]
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            Arial, Helvetica, sans-serif; 로 작성하면
+            Arial 적용을 시도하고 적용을 실패하면 Helvetica, sans-serif 로 작동함
+
+            [글자 굵기] 
+            normal | bold | ...
+            보통 부모한테 걸어도 자식한테 상속됨
+            
+            요새는 굵기를, 100 200 300 400 ... 이런식으로 쓰는 경우가 꽤 있음
+
+            [글자꾸미기] 
+            none | underline | overline | line-through 
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            [글자 색상]
+            보통 부모한테 걸어도 자식한테 상속됨
+        */
+        .wrapper1 {
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-decoration: underline;
+            color: red;
+        }
+        /*
+            [글자 크기]
+            px | % | em | rem | vw | vh | ...
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            [글자 변환]
+            none | uppercase | lowercase | capitalize (단어 앞글자 대문자)
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            [자간 (글자 사이의 간격)] 
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            [행간 (줄 사이의 간격)]
+            보통 부모한테 걸어도 자식한테 상속됨
+
+            ex ) line-height: 1.5; 는 현재 간격의 1.5배
+            
+            [들여쓰기]
+            보통 부모한테 걸어도 자식한테 상속됨
+        */
+        .wrapper2 {
+            font-size: 20px;
+            text-transform: capitalize;
+            letter-spacing: -0.5px;
+            line-height: 1.5;
+            text-indent: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper1"> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nulla nihil laborum soluta vero autem sequi aliquid. Nemo optio repellendus culpa at quos sint animi delectus tempora ratione nostrum? Laudantium! </p>
+    </div>
+
+    <div class="wrapper2"> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nulla nihil laborum soluta vero autem sequi aliquid. Nemo optio repellendus culpa at quos sint animi delectus tempora ratione nostrum? Laudantium! </p>
+    </div>
+
+    <div class="wrapper3"> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nulla nihil laborum soluta vero autem sequi aliquid. Nemo optio repellendus culpa at quos sint animi delectus tempora ratione nostrum? Laudantium! </p>
+    </div>
+</body>
+</html>

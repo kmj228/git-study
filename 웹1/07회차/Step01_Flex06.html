@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Flex06.html</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        .container {
+            display: flex;
+            /* 
+                [ align-items ]
+                교차축 방향으로 아이템 정렬을 결정
+                stretch | flex-start | flex-end | center
+            */
+            align-items: center;
+        }
+        .container2 {
+            display: flex;
+            height: 300px;
+            background-color: wheat;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            /* 
+                [ align-content ]
+                여러줄의 아이템을 교차축 방향으로 정렬
+                flex-wrap : wrap 에서만 동작
+                stretch | flex-start | flex-end | center
+                spaced-between | stace-around | space-evenly
+            */
+
+            align-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <!-- Flex Container : flex의 영향을 받는 전체 공간 -->
+    <div class="container">
+        <!-- Flex Items : Flex의 설치된 속성에 따라 배치-->
+        <div class="item"> div1</div>
+        <div class="item"> div2</div>
+        <div class="item"> div3</div>
+    </div>
+
+    <div class="container2">
+        <!-- Flex Items : Flex의 설치된 속성에 따라 배치-->
+        <div class="item"> div1</div>
+        <div class="item"> div2</div>
+        <div class="item"> div3</div>
+        <div class="item"> div4</div>
+        <div class="item"> div5</div>
+        <div class="item"> div6</div>
+    </div>
+</body>
+</html>

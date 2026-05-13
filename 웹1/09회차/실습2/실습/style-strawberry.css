@@ -1,0 +1,95 @@
+/*********** default ***********/
+
+body {
+	background-image: url(strawberry/straw-bg.png);
+	background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+a {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+	border-color: red;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+/*********** wrapper ***********/
+
+.wrapper {
+	position: relative;
+	background-color: white;
+	margin: 0 auto;
+	padding: 20px;
+	width: 960px;
+	border: solid 3px red;
+	border-radius: 30px
+}
+
+.icon {
+	position: absolute;
+	right: -90px;
+	bottom: -100px;
+}
+
+/*********** title / gnb ***********/
+
+.title {
+	display: inline-block;
+	padding: 20px;
+	color: red;
+}
+
+.gnb {
+	display: flex;
+	float: right;
+	border-radius: 20px;
+	background-color: red;
+	padding: 0 10px;
+	margin: 20px;
+}
+
+.gnb a {
+	text-decoration: none;
+	color: white;
+	padding: 0 10px;
+	height: 50px;
+	line-height: 50px;
+}
+
+/*********** text-box ***********/
+
+.text-box {
+	display: flex;
+}
+
+.text-box p {
+	width: 300px;
+	padding: 20px;
+}
+
+/*********** hover ***********/
+
+.cake:hover {
+	content: url(strawberry/cake-hover.png);
+}
+
+.pie:hover {
+	content: url(strawberry/pie-hover.png);
+}
+
+.jam:hover {
+	content: url(strawberry/jam-hover.png);
+}

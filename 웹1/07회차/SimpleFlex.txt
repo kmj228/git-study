@@ -1,0 +1,33 @@
+display: flex;
+inline처럼 작동함
+자신이 가진 item의 width 값 만큼 차지함
+height는 Flex Container의 높이만큼 늘어남
+
+flex-direction은 item이 배치되는 축의 방향을 결정함
+row | row-reverse | column | column-reverse
+
+flew-flow
+flex-direction | flex-wrap
+
+justify-content는 메인축 방향으로 아이템 정렬을 결정함
+flex-start | flex-end | center
+space-between | space-around | space-evenly
+
+align-items는 교차축 방향으로 아이템 정렬을 결정함
+stretch | flex-start | flex-end | center
+
+* 이때 flex-direction 의 방향에 따라
+justify-content, align-items의 방향이 바뀜
+
+
+align-content는 여러줄의 아이템을 교차축 방향으로 정렬
+flex-wrap : wrap 에서만 동작
+stretch | flex-start | flex-end | center
+spaced-between | stace-around | space-evenly
+
+order: 5;
+order 숫자에 따라 작은게 위로, 큰게 아래로
+
+여러 실습 진행 및
+Flexboxfroggy.com 에서 간단한 게임을 진행하며
+display: flex에 대해 익힘

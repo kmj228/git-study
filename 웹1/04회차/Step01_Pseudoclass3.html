@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Pseudoclass3</title>
+</head>
+<style>
+    p::first-letter {
+        font-weight: bold; /* 글자 굵기 */
+        color: red;
+    }
+    #one::first-line {
+        background-color: yellow;
+    }
+    .quote::before {
+        content: '안녕!';
+        color: red;
+    }
+    .quote::after {
+        content: "잘가!";
+        color: blue;
+    }
+    div p:first-child {
+        color: green;
+    }
+    
+</style>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate excepturi numquam maiores? Voluptatem voluptas distinctio accusamus quo quidem, accusantium, dolore, modi excepturi officiis aliquam facere! Quidem eaque molestias at ea!</p>        
+        <p id="one">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate excepturi numquam maiores? Voluptatem voluptas distinctio accusamus quo quidem, accusantium, dolore, modi excepturi officiis aliquam facere! Quidem eaque molestias at ea!</p>        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate excepturi numquam maiores? Voluptatem voluptas distinctio accusamus quo quidem, accusantium, dolore, modi excepturi officiis aliquam facere! Quidem eaque molestias at ea!</p>        
+        <p class="quote">천리길도</p>
+        <p class="quote">한걸음</p>
+        <p class="quote">부터</p>
+        <p class="quote">천리길도</p>
+        <p class="quote">한걸음</p>
+        <p class="quote">부터</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Flex09.html</title>
+    <style>
+        .container {
+            display: flex;
+            border: 1px solid black;
+            height: 50px;
+            line-height: 50px;
+            align-items: center;
+        }
+        .box {
+            color:white;
+            text-align: center;
+            height: 100%;
+        }
+        /* 
+            [ flex-grow ]
+            요소가 부모 컨테이너 내에서 사용할 수 있는 공간을
+            얼마나 차지할지 결정
+
+            [ flex-basis ]
+            요소의 기본 크기를 지정
+            auto : width 값을 받아옴
+
+            [ flex-shrink ]
+            요소가 부모 컨테이너의 크기가 줄어들 때
+            얼마나 축소될지 결정
+        */
+        .box1 {
+            background-color: red;
+            flex-grow: 1;
+        }
+        .box2 {
+            background-color: green;
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+        .box3 {
+            background-color: red;
+            flex-grow: 1;
+        }
+        .box4 {
+            background-color: green;
+            width: 200px;
+            flex-basis: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"> 1</div>
+        <div class="box box2"> 2</div>
+    </div>
+
+    <div class="container">
+        <div class="box box3"> 3</div>
+        <div class="box box4"> 4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+        background-color: whitesmoke;
+    }
+
+    /* header */
+    .header {
+        width: 1000px;
+        height: 100px;
+        background-color: orange;
+        margin-bottom: 20px;
+    }
+    
+    /* main */
+    .main {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .main .snb {
+        width: 200px;
+        height: 700px;
+        background-color: blue;
+    }
+    .main .contents {
+        width: 790px;
+        height: 700px;
+        background-color: lime;
+    }
+
+    /* bottom */
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .bottom .bottom-list {
+        width: 330px;
+        height: 130px;
+        background-color: hotpink;
+    }
+
+    /* footer */
+    .footer {
+        width: 1000px;
+        height: 50px;
+        background-color: gray;
+    }
+</style>
+<body>
+    <main class="wrapper">
+        <header class="header"></header>
+
+        <section class="main">
+            <aside class="snb"></aside>
+            <div class="contents"></div>
+        </section>
+
+        <section class="bottom">
+            <div class="bottom-list"></div>
+            <div class="bottom-list"></div>
+            <div class="bottom-list"></div>
+        </section>
+
+        <footer class="footer"></footer>
+    </main>
+</body>
+</html>

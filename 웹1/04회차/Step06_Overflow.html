@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_Overflow</title>
+    <style>
+        .wrapper {
+            background-color: aquamarine;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+
+            /*
+            visible : 보이게
+            hidden : 안보이게 
+            scroll : 스크롤 처리 (기본적으로 가로/세로 스크롤이 다 생김)
+            auto : 스크롤이 필요한 부분만 스크롤이 생김
+            */
+            overflow: scroll;
+
+            /* overflow는 x, y 따로 지정 할 수도 있음 */
+            /* 
+            overflow-x: scroll;
+            overflow-y: scroll;
+            */
+        }
+        .box {
+            background-color: yellowgreen;
+            width: 600px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"> div1 </div>
+        <p class="box"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ex rerum illum minus neque dolor recusandae temporibus, cupiditate autem, numquam amet laudantium laboriosam voluptas officia quasi! In non doloribus quos!</p>
+    </div>
+</body>
+</html>

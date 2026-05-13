@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Flex10.html</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            border: 1px solid blue;
+            height: 50px;
+            line-height: 50px;
+        }
+        .box {
+            text-align: center;
+            height: 100%;
+        }
+        .box1 {
+            background-color: red;
+            /* 
+                flex-grow:1, flex-shirink:1, flex-basis:0
+                요소가 가능한 모든 여유공간을 차지
+                => Figma 에서 fill container
+            */
+            flex: 1;
+        }
+        .box2 {
+            background-color: green;
+            /*
+                flex-grow:0, flex-shirink:0, flex-basis:auto
+            */
+            width: 400px;
+            flex:none;
+        }
+        .box3 {
+            background-color: blue;
+            /*
+                flex-grow:2, flex-shirink:1, flex-basis:auto
+            */
+            flex:2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

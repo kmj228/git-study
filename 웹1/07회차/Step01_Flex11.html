@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Flex11.html</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            height: 200px;
+            gap: 20px;
+        }
+        .box {
+            width: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+        .box1 {
+            background-color: red;
+            /* 
+                아이템 하나만 교차축 방향으로 정렬 
+                flex-start | flex-end | center 
+            */
+            align-self: flex-start;
+        }
+        .box2 {
+            background-color: green;
+        }
+        .box3 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div> 
+</body>
+</html>

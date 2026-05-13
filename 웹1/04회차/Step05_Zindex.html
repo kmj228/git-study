@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_Zindex</title>
+    <style>
+        .wrapper {
+            border: 1px solid red;
+            position: relative;
+        }
+        .wrapper img {
+            position: absolute; /* absolute를 사용하여 부모의 높이가 사라짐 */ 
+            /* (height: 40px 처럼 직접 지정하는거 말고는 해결 방법이 없음) */
+        }
+        #one {
+            top: 100px;
+            left: 100px;
+            z-index: 9; /* 겹쳤을때 위에 올라올 사진을 정할 수 있음 */
+            /* (z-index 가 큰 애가 가장 위로 올라감) */
+        }
+        #two {
+            top: 150px;
+            left: 150px;
+        }
+        #three {
+            top: 200px;
+            left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper"> 
+        <img id="one" src="images/icon01.png" />
+        <img id="two" src="images/icon02.png" />
+        <img id="three" src="images/icon03.png" />
+    </div>
+</body>
+</html>

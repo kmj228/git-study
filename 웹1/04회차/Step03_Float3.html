@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Float3</title>
+    <style>
+        /* 자식한테 float 가 생기면, 부모의 높이값이 사라짐 */
+        .wrapper {
+            border: 1px solid blue;
+            background-color: wheat;
+
+            /* 사라진 높이값 다시 만들기 */
+            /* 1. 첫번째 방법 */
+            /* height: 200px; */ /* 고정 높이값 설정 */
+            
+            /* 2. 두번째 방법 */
+            overflow: auto; /* float된 자식 요소를 감쌀 수 있도록 설정 */
+            /* * 참고 원래 overflow는 여기에 사용하는게 아님 (임시 해결책) */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+            float: left;
+        }
+        p {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"> div1 </div>
+        <div class="box"> div2 </div>
+        <div class="box"> div3 </div>
+        <div class="box"> div4 </div>
+        <div class="box"> div5 </div>
+    </div>
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae delectus commodi reprehenderit nam molestiae consequatur voluptatum atque, accusantium impedit, aspernatur facilis, eos omnis harum voluptas? Ipsa dolor veritatis cupiditate aut? </p>
+</body>
+</html>

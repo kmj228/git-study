@@ -1,0 +1,19 @@
+
+body {
+    background-image: url(orange-bg.png);
+}
+
+.orange {
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+}
+
+.orange h1 {
+    color: #f90;
+}
+
+.orange img {
+    float: right;
+}
