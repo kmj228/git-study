@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_If1.html</title>
+</head>
+
+<body>
+    <button onclick="input()">점수 입력</button>
+
+    <script>
+        function input() {
+            var inputNum = parseInt(prompt('점수입력 (0~100점)'));
+
+            if (inputNum >= 90) {
+                document.write("A");
+            }
+            else if (inputNum >= 80) {
+                document.write("B");
+            }
+            else if (inputNum >= 70) {
+                document.write("C");
+            }
+            else {
+                document.write("F");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_If5.html</title>
+</head>
+<body>
+    <div id="one">0</div>
+    <button onclick="add()">CLICK</button>
+
+    <script>
+        var count = 0;
+
+        function add() {
+            if (parseInt(document.querySelector("#one").innerHTML) == 10) {
+                return;
+            }
+            count++;
+            document.querySelector("#one").innerHTML = count;
+        }
+    </script>
+</body>
+</html>
